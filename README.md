@@ -1,4 +1,21 @@
-# terraform_ansible_integration
+# A Terraform/Ansible Integration Demo
+
+## Assumptions 
+* You know what an AWS Profile is and How to Create one
+* We use the default profile for the Demo but you can change to whatever profile you wish.
+## Quick Start
+* Login to AWS Console
+* Change Region to us-east-1
+* Create a SSH Key and Save it Locally
+* ```chmod 400 the-key-i-created.pem```
+* Update private_key_file in ansible.cfg to the key you created and changed permissions on
+* Update 'key_name' with your key_name in the aws instance creation block of ansi_terraform.tf
+* in the "null_resource" blocks change "private_key" to the location of the key you downloaded (there are currently two null_resource blocks)
+* terraform apply - wait till this completes
+* Copy the public ip output and paste it into a browser to confirm the content was provisioned
+
+## Beyond the Quick Start
+
 Demonstration on how to integrate Terraform with Ansible
 
 Modified from https://medium.com/geekculture/the-most-simplified-integration-of-ansible-and-terraform-49f130b9fc8
