@@ -8,7 +8,7 @@ provider "aws" {
 resource "aws_instance" "os1" {
   ami           = "ami-0b5eea76982371e91"
   instance_type = "t2.micro"
-  key_name = "test-key"
+  key_name = "your-key-name"
   tags = {
     Name = "TerraformOS"
   }
@@ -61,7 +61,7 @@ resource "null_resource" "nullremote1" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/Downloads/tutorials/test-key.pem")
+    private_key = file("your-key-location.pem")
     host        = aws_instance.os1.public_ip
   }
   #copying the ip.txt file to the Ansible control node from local system
@@ -79,7 +79,7 @@ resource "null_resource" "nullremote2" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/Downloads/tutorials/test-key.pem")
+    private_key = file("yourkeylocation.pem")
     host        = aws_instance.os1.public_ip
   }
 
