@@ -1,7 +1,8 @@
 # A Terraform/Ansible Integration Demo
 
 ## Assumptions 
-* You know what an AWS Profile is and How to Create one
+* You know what an AWS Profile is and How to Create one ```aws s3 ls```
+* You have the AWS CLI Installed and a Default Profile Created [Docs](https://docs.aws.amazon.com/cli/latest/userguide/welcome-examples.html)
 * We use the default profile for the Demo but you can change to whatever profile you wish.
 ## Quick Start
 * Login to AWS Console
