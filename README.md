@@ -8,6 +8,7 @@
 * Change Region to us-east-1
 * Create a SSH Key and Save it Locally
 * ```chmod 400 the-key-i-created.pem```
+* The Default Security Group needs SSH Access to port 22 at least to your own ip 0.0.0.0/0 can be used for the demo but is NOT recommended for production
 * Update private_key_file in ansible.cfg to the key you created and changed permissions on
 * Update 'key_name' with your key_name in the aws instance creation block of ansi_terraform.tf
 * in the "null_resource" blocks change "private_key" to the location of the key you downloaded (there are currently two null_resource blocks)
@@ -772,3 +773,14 @@ Outputs:
 op1 = "54.172.18.56"
 op2 = "/dev/sdh"
 ```
+
+## Skill Required to complete this demo
+
+* Create and Use and AWS Profile
+* Create and Use IAM User Programatic Credentials
+* AWS Configure
+* terraform plan
+* terraform apply 
+
+## Nice to Have
+* A little ansible knowledge is useful but not required to get the demo working
